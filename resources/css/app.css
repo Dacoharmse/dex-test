@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Styles */
+body {
+    background-color: #101116;
+    color: #C4C4C4;
+    font-family: 'Nunito', sans-serif;
+}
+/* Truncate text after two lines */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Center the title and projects container */
+.highlighted-projects-wrapper {
+    max-width: 85%; /* Adjust width based on your layout */
+}
+
+/* Highlighted projects grid */
+.highlighted-projects {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns */
+    gap: 20px; /* Spacing between project boxes */
+    justify-content: right;
+}
+
+/* Project item */
+.highlighted-item {
+    transition: transform 0.3s;
+}
+
+/* On hover, scale the item */
+.highlighted-item:hover {
+    transform: scale(1.05);
+}
